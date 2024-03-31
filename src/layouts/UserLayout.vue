@@ -1,34 +1,37 @@
 <script setup>
 import {ref,onMounted} from 'vue'
-import {RouterLink} from 'vue-router'
+import {RouterLink,useRouter} from 'vue-router'
 import Swal from 'sweetalert2'
 
+const router = useRouter();
 const isLogin = ref(false);
+const searchText = ref('');
+
 
 onMounted(()=>{
     if (localStorage.getItem('isLogin')) {
         isLogin.value = true
     }
 })
-const login = async()=>{
+const login =()=>{
     isLogin.value = true;
     localStorage.setItem('isLogin',true);
-    await Toast.fire({
+     Toast.fire({
         icon: "success",
         title: "Signend in successfully"
     });
 }
-const logout = async()=>{
+const logout = ()=>{
     isLogin.value = false;
     localStorage.removeItem('isLogin');
-   await Toast.fire({
+    Toast.fire({
         icon: "success",
         title: "Sign out in successfully"
     });
 }
 const Toast = Swal.mixin({
-  //toast: true,
-  //position: "top-end",
+  toast: true,
+  position: "top-end",
   showConfirmButton: false,
   timer: 1500,
   timerProgressBar: true,
@@ -38,12 +41,25 @@ const Toast = Swal.mixin({
   }
 });
 
+const handleSearch = (event) =>{
+  //console.log(event.key);
+
+  if (event.key==='Enter') {
+    router.push({
+      name: 'search', // ชื่อของ route ที่ต้องการไป
+      query: {
+        q: searchText.value // ส่งค่าคำค้นหาผ่าน query parameter q
+      }
+    });
+  }
+}
+
 </script>
 
 
 <template>
   <div class="container mx-auto">
-    <div class="navbar bg-base-100">
+    <div class="navbar bg-base-100 drop-shadow-md">
       <div class="flex-1">
         <RouterLink :to="{name : 'home'}" class="text-xl btn btn-ghost">Craft Beer ไทย</RouterLink>
       </div>
@@ -53,6 +69,8 @@ const Toast = Swal.mixin({
             type="text"
             placeholder="Search"
             class="w-24 input input-bordered md:w-auto"
+            v-model="searchText"
+            @keyup="handleSearch"
           />
         </div>
 
