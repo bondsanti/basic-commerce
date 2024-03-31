@@ -9,6 +9,17 @@ const ProductStore = useProductStore();
 <template>
   <div>
     <UserLayout>
+      <div
+        class="min-h-screen mt-2 hero"
+        style="
+          background-image: url(https://www.wellshopcraft.com/Images/Banner/4CUTpNtB-banner%20slide-12109.jpg);
+        "
+      >
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="text-center hero-content text-neutral-content">
+
+        </div>
+      </div>
       <!-- product-->
       <Product :products="ProductStore.list"> </Product>
     </UserLayout>
