@@ -4,36 +4,36 @@ export const useProductStore = defineStore('counter',{
   state:() => ({
     list:[{
       id:1,
-      name:'Passion Fruit witbier m๓๒(m32)',
-      imageUrl:'https://www.wellshopcraft.com/Images/Products/2958241-20220902-214917.jpg',
+      name:'Happy Halloween Party Series-Sitting Pumpkin Vinyl Plush Pendant',
+      imageUrl:'https://prod-thailand-res.popmart.com/default/20240910_202726_766894____20240910-202706_____1200x1200.jpg?x-oss-process=image/resize,p_40,format,webp,format,webp',
       quantity:10,
-      about:'4.7% (can) - 490ML',
+      about:'สูงโดยประมาณ 15 เซนติเมตร',
       state:'open',
-      price:99
+      price:850
     },{
       id:2,
-      name:'IPA m๓๒(m32)',
-      imageUrl:'https://www.wellshopcraft.com/Images/Products/Large/1902440-20220902-213822.jpg',
+      name:'MEGA SKULLPANDA 1000% Egon Schiele',
+      imageUrl:'https://prod-thailand-res.popmart.com/default/20240919_105418_551226____1000_____1200x1200.jpg?x-oss-process=image/resize,p_40,format,webp,format,webp',
       quantity:10,
-      about:'6.2% (can) - 490ML',
+      about:'760mm',
       state:'open',
-      price:109
+      price:36900
     },{
       id:3,
-      name:'HOPPY PLAE LAGER m๓๒(m32)',
-      imageUrl:'https://www.wellshopcraft.com/Images/Products/Large/8145489-20220902-215344.jpg',
+      name:'POLAR - HELLO POLAR Season 1 Series Figures',
+      imageUrl:'https://prod-thailand-res.popmart.com/default/20240913_154444_888736____1_____1200x1200.jpg?x-oss-process=image/resize,p_40,format,webp,format,webp',
       quantity:10,
-      about:'5% (can) - 490ML',
+      about:'สูงโดยประมาณ 5.5-10.6 เซนติเมตร',
       state:'open',
-      price:99
+      price:380
     },{
       id:4,
-      name:'Khun Phaen Plai Kaew Pale Ale',
-      imageUrl:'https://www.wellshopcraft.com/Images/Products/Large/8898526-20220902-230551.jpg',
+      name:'Zsiga We All Are Kids Series Figures',
+      imageUrl:'https://prod-thailand-res.popmart.com/default/20240913_154244_979965____1_____1200x1200.jpg?x-oss-process=image/resize,p_40,format,webp,format,webp',
       quantity:10,
-      about:'4.7% (can) - 490ML',
+      about:'สูงโดยประมาณ 7.5cm-10.3cm เซนติเมตร',
       state:'open',
-      price:99
+      price:380
     }]
   }),
   actions: {
